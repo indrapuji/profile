@@ -6,13 +6,13 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/">
+				<Route exact path="/profile">
 					<Home />
 				</Route>
-				<Route path="/skills">
+				<Route path="/profile/skills">
 					<Skills />
 				</Route>
-				<Route path="/experience">
+				<Route path="/profile/experience">
 					<Experience />
 				</Route>
 			</Switch>
