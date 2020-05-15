@@ -41,8 +41,9 @@ function About() {
 										Full Stack Javascript Developer
 									</h4>
 									<p style={{ color: "white" }}>
-										I'm a web designer / developer based in Bekasi, Indonesia. I
-										have a passion for web design and love to create for web.
+										I'm a Full Stack developer / web designer based in Bekasi,
+										Indonesia. I have a passion for web design and love to
+										create for web.
 									</p>
 									<Row style={{ color: "white" }}>
 										<Col>
@@ -68,8 +69,120 @@ function About() {
 								<h5>Skills</h5>
 							</div>
 							<Row style={{ color: "white" }}>
-								<Col>Colomn 1</Col>
-								<Col>Colomn 2</Col>
+								<Col>
+									<div className="skillBox">
+										<p>Photoshop</p>
+										<p>Intermediate</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "50%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>HTML</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>CSS</p>
+										<p>Intermediate</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "50%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>Javascript</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>Express.js</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>PostgreSql</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+								</Col>
+								<Col>
+									<div className="skillBox">
+										<p>React Native</p>
+										<p>Intermediate</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "50%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>React.js</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>Sequelize</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>JQuery</p>
+										<p>Intermediate</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+									<div className="skillBox">
+										<p>Vue.js</p>
+										<p>Advanced</p>
+										<div className="skill">
+											<div
+												className="skill_level"
+												style={{ width: "75%" }}
+											></div>
+										</div>
+									</div>
+								</Col>
 							</Row>
 						</Card.Body>
 					</Card>

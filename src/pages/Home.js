@@ -20,9 +20,18 @@ function Home() {
 				transition={{ duration: 5 }}
 				className="socialGroup"
 			>
-				<FaTwitter color="lightgrey" size="30" className="socialIcon" />
-				<FaInstagram color="lightgrey" size="30" className="socialIcon" />
-				<FaLinkedin color="lightgrey" size="30" className="socialIcon" />
+				<a href="https://twitter.com/indra_pn" target="_blank">
+					<FaTwitter color="lightgrey" size="30" className="socialIcon" />
+				</a>
+				<a href="https://www.instagram.com/indrapuji/" target="_blank">
+					<FaInstagram color="lightgrey" size="30" className="socialIcon" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/indra-puji-novirwan/"
+					target="_blank"
+				>
+					<FaLinkedin color="lightgrey" size="30" className="socialIcon" />
+				</a>
 			</motion.div>
 			<motion.h1
 				initial={{ y: -200 }}
