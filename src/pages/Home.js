@@ -1,46 +1,49 @@
 import React from "react";
 import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Navigation from "../components/Navigation";
 
 function Home() {
-	function overColor(e) {
-		e.target.style.color = "blue";
-	}
-	function leaveColor(e) {
-		e.target.style.color = "lightgrey";
-	}
+	const pageTransition = {
+		in: {
+			opacity: 1,
+			y: 0,
+		},
+		out: {
+			opacity: 0,
+			y: "-100%",
+		},
+	};
 	return (
-		<>
-			<div className="socialGroup">
+		<motion.div initial="out" animate="in" exit="out" variants={pageTransition}>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 5 }}
+				className="socialGroup"
+			>
 				<FaTwitter color="lightgrey" size="30" className="socialIcon" />
 				<FaInstagram color="lightgrey" size="30" className="socialIcon" />
 				<FaLinkedin color="lightgrey" size="30" className="socialIcon" />
-			</div>
-			<h1 className="title">Indra Puji Novirwan</h1>
-			<h3 className="subtitle">Full Stack Javascript Developer</h3>
-			<ul className="homeNav">
-				<Link to="/profile">
-					<li onMouseLeave={leaveColor} onMouseOver={overColor}>
-						Home
-					</li>
-				</Link>
-				<Link to="/profile/about">
-					<li onMouseLeave={leaveColor} onMouseOver={overColor}>
-						About
-					</li>
-				</Link>
-				<Link to="/profile/resume">
-					<li onMouseLeave={leaveColor} onMouseOver={overColor}>
-						Resume
-					</li>
-				</Link>
-				<Link to="/profile/portofolio">
-					<li onMouseLeave={leaveColor} onMouseOver={overColor}>
-						Portofolio
-					</li>
-				</Link>
-			</ul>
-		</>
+			</motion.div>
+			<motion.h1
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 5 }}
+				className="title"
+			>
+				Indra Puji Novirwan
+			</motion.h1>
+			<motion.h3
+				initial={{ y: 100 }}
+				animate={{ y: 0 }}
+				transition={{ duration: 1 }}
+				className="subtitle"
+			>
+				Full Stack Javascript Developer
+			</motion.h3>
+			<Navigation isAnimate={true} />
+		</motion.div>
 	);
 }
 

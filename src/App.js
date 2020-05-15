@@ -1,13 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import { Home, About, Resume, Portofolio } from "./pages";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
+	const location = useLocation();
+
 	return (
-		<div className="app">
+		<motion.div className="app">
 			<main>
-				<Router>
-					<Switch>
+				<AnimatePresence exitBeforeEnter>
+					<Switch location={location} key={location.pathname}>
 						<Route exact path="/profile">
 							<Home />
 						</Route>
@@ -21,9 +24,9 @@ function App() {
 							<Portofolio />
 						</Route>
 					</Switch>
-				</Router>
+				</AnimatePresence>
 			</main>
-		</div>
+		</motion.div>
 	);
 }
 

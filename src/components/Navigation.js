@@ -1,8 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
-import { Nav, Container } from "react-bootstrap";
 
-function Navigation() {
+function Navigation(props) {
 	const history = useHistory();
 
 	function profile() {
@@ -25,46 +25,64 @@ function Navigation() {
 	}
 	return (
 		<>
-			<Container>
-				<Nav className="justify-content-end">
-					<Nav.Item>
-						<Nav.Link
-							onMouseLeave={leaveColor}
-							onMouseOver={overColor}
-							onClick={profile}
-						>
-							Home
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link
-							onMouseLeave={leaveColor}
-							onMouseOver={overColor}
-							onClick={about}
-						>
-							About
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link
-							onMouseLeave={leaveColor}
-							onMouseOver={overColor}
-							onClick={resume}
-						>
-							Resume
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link
-							onMouseLeave={leaveColor}
-							onMouseOver={overColor}
-							onClick={portofolio}
-						>
-							Portofolio
-						</Nav.Link>
-					</Nav.Item>
-				</Nav>
-			</Container>
+			{props.isAnimate && (
+				<motion.ul
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 10 }}
+					className="homeNav"
+				>
+					<li
+						onMouseOut={leaveColor}
+						onMouseEnter={overColor}
+						onClick={profile}
+					>
+						Home
+					</li>
+					<li onMouseOut={leaveColor} onMouseEnter={overColor} onClick={about}>
+						About
+					</li>
+					<li onMouseOut={leaveColor} onMouseEnter={overColor} onClick={resume}>
+						Resume
+					</li>
+					<li
+						onMouseOut={leaveColor}
+						onMouseEnter={overColor}
+						onClick={portofolio}
+					>
+						Portofolio
+					</li>
+				</motion.ul>
+			)}
+			{!props.isAnimate && (
+				<ul
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 10 }}
+					className="homeNav"
+				>
+					<li
+						onMouseOut={leaveColor}
+						onMouseEnter={overColor}
+						onClick={profile}
+					>
+						Home
+					</li>
+					<li onMouseOut={leaveColor} onMouseEnter={overColor} onClick={about}>
+						About
+					</li>
+					<li onMouseOut={leaveColor} onMouseEnter={overColor} onClick={resume}>
+						Resume
+					</li>
+					<li
+						onMouseOut={leaveColor}
+						onMouseEnter={overColor}
+						onClick={portofolio}
+					>
+						Portofolio
+					</li>
+				</ul>
+			)}
 		</>
 	);
 }

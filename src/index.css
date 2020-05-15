@@ -6,6 +6,7 @@
 main {
 	min-height: 100vh;
 }
+
 .homeNav {
 	margin-left: 3%;
 }
@@ -14,22 +15,21 @@ main {
 	color: lightgrey;
 	display: inline;
 	margin-right: 25px;
+	cursor: pointer;
 }
 
 .socialGroup {
 	display: inline;
 	margin-left: 6%;
 }
+
 .socialIcon {
 	margin-right: 25px;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 5px;
 	cursor: pointer;
-	background-color: grey;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
 }
+
 .socialIcon :hover {
 	color: blue;
 }
