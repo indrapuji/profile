@@ -1,16 +1,14 @@
 import React from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Home, About, Resume, Portofolio } from "./pages";
 import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
-	const location = useLocation();
-
 	return (
 		<motion.div className="app">
 			<main>
-				<AnimatePresence exitBeforeEnter>
-					<Switch location={location} key={location.pathname}>
+				<AnimatePresence>
+					<Switch>
 						<Route exact path="/profile">
 							<Home />
 						</Route>

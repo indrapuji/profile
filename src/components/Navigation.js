@@ -18,7 +18,7 @@ function Navigation(props) {
 		history.push("/profile/portofolio");
 	}
 	function overColor(e) {
-		e.target.style.color = "blue";
+		e.target.style.color = "#45fc03";
 	}
 	function leaveColor(e) {
 		e.target.style.color = "lightgrey";
@@ -55,11 +55,11 @@ function Navigation(props) {
 				</motion.ul>
 			)}
 			{!props.isAnimate && (
-				<ul
+				<motion.ul
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 10 }}
-					className="homeNav"
+					transition={{ duration: 0.5 }}
+					className="allNav"
 				>
 					<li
 						onMouseOut={leaveColor}
@@ -81,7 +81,7 @@ function Navigation(props) {
 					>
 						Portofolio
 					</li>
-				</ul>
+				</motion.ul>
 			)}
 		</>
 	);

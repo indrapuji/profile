@@ -9,6 +9,19 @@ main {
 
 .homeNav {
 	margin-left: 3%;
+	padding-top: 1%;
+}
+
+.allNav {
+	float: right;
+	padding-top: 1%;
+}
+
+.allNav li {
+	color: lightgrey;
+	display: inline;
+	margin-right: 25px;
+	cursor: pointer;
 }
 
 .homeNav li {

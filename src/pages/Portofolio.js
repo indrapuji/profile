@@ -1,26 +1,18 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Container } from "react-bootstrap";
 
 function Portofolio() {
-	const pageTransition = {
-		in: {
-			opacity: 1,
-			y: 0,
-		},
-		out: {
-			opacity: 0,
-			y: "-100%",
-		},
-	};
 	return (
-		<motion.div initial="out" animate="in" exit="out" variants={pageTransition}>
+		<div>
 			<Container>
 				<Navigation />
-				<h1 className="text">Portofolio</h1>
+				<h1 style={{ fontSize: "3rem", color: "white", paddingTop: "1%" }}>
+					Indra Puji Novirwan
+				</h1>
 			</Container>
-		</motion.div>
+		</div>
 	);
 }
 
