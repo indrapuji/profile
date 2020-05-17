@@ -10,7 +10,7 @@ function Portfolio() {
 			x: 0,
 		},
 		out: {
-			x: 1000,
+			x: "100vw",
 			opacity: 0,
 		},
 	};

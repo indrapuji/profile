@@ -20,3 +20,25 @@
 .note {
 	color: gray;
 }
+
+.title-about {
+	text-align: justify;
+	padding-top: 14%;
+	padding-left: 7%;
+	font-family: "Kaushan Script", cursive;
+	color: #45fc03;
+}
+
+.sub-about {
+	padding-left: 9%;
+	font-family: "Kaushan Script", cursive;
+	color: white;
+}
+
+.card-about {
+	width: 35rem;
+	margin-left: 7%;
+	color: gray;
+	font-family: "Kaushan Script", cursive;
+	font-size: medium;
+}
