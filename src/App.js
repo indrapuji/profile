@@ -1,14 +1,17 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { Home, About, Resume, Portofolio } from "./pages";
-import { motion, AnimatePresence } from "framer-motion";
+import { Home, About, Resume, Portfolio } from "./pages";
+import Navigation from "./components/Navigation";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+	const location = useLocation();
 	return (
-		<motion.div className="app">
+		<div className="App">
 			<main>
-				<AnimatePresence>
-					<Switch>
+				<Navigation />
+				<AnimatePresence exitBeforeEnter>
+					<Switch location={location} key={location.pathname}>
 						<Route exact path="/profile">
 							<Home />
 						</Route>
@@ -18,13 +21,13 @@ function App() {
 						<Route path="/profile/resume">
 							<Resume />
 						</Route>
-						<Route path="/profile/portofolio">
-							<Portofolio />
+						<Route path="/profile/portfolio">
+							<Portfolio />
 						</Route>
 					</Switch>
 				</AnimatePresence>
 			</main>
-		</motion.div>
+		</div>
 	);
 }
 

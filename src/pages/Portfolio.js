@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function About() {
+function Portfolio() {
 	const pageTransition = {
 		init: {
 			x: -500,
@@ -21,8 +21,8 @@ function About() {
 			exit="out"
 			variants={pageTransition}
 		>
-			<h1 className="title"> Halaman About</h1>
+			<h1 className="title"> Halaman Portfolio</h1>
 		</motion.div>
 	);
 }
-export default About;
+export default Portfolio;

@@ -1,57 +1,50 @@
 import React from "react";
-import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navigation from "../components/Navigation";
 
 function Home() {
+	const history = useHistory();
 	const pageTransition = {
+		init: {
+			x: -500,
+		},
 		in: {
-			opacity: 1,
+			x: 0,
 		},
 		out: {
+			x: 1000,
 			opacity: 0,
 		},
 	};
+	function about() {
+		history.push("/profile/about");
+	}
 	return (
-		<motion.div initial="out" animate="in" exit="out" variants={pageTransition}>
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 5 }}
-				className="socialGroup"
-			>
-				<a href="https://twitter.com/indra_pn" target="_blank">
-					<FaTwitter color="lightgrey" size="30" className="socialIcon" />
-				</a>
-				<a href="https://www.instagram.com/indrapuji/" target="_blank">
-					<FaInstagram color="lightgrey" size="30" className="socialIcon" />
-				</a>
-				<a
-					href="https://www.linkedin.com/in/indra-puji-novirwan/"
-					target="_blank"
+		<motion.div
+			initial="init"
+			animate="in"
+			exit="out"
+			variants={pageTransition}
+		>
+			<div className="title">
+				<h1>Hello, my name is</h1>
+				<motion.h1
+					whileHover={{ color: "white" }}
+					animate={{ y: -5, opacity: 0.5 }}
+					transition={{
+						yoyo: Infinity,
+						duration: 0.3,
+						ease: "easeInOut",
+					}}
+					className="title-name"
+					onClick={about}
 				>
-					<FaLinkedin color="lightgrey" size="30" className="socialIcon" />
-				</a>
-			</motion.div>
-			<motion.h1
-				initial={{ y: -200 }}
-				animate={{ y: 0 }}
-				transition={{ duration: 0.5 }}
-				className="title"
-			>
-				Indra Puji Novirwan
-			</motion.h1>
-			<motion.h3
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 5 }}
-				className="subtitle"
-			>
-				Full Stack Javascript Developer
-			</motion.h3>
-			<Navigation isAnimate={true} />
+					Indra Puji Novirwan
+				</motion.h1>
+				<h1>Junior Programmer...</h1>
+				<p className="note">Full Stack Javascript Developer / Freelancer</p>
+			</div>
 		</motion.div>
 	);
 }
-
 export default Home;

@@ -1,104 +1,22 @@
-.app {
-	background-color: black;
-	background-image: url("./assets/image.jpg");
-}
-
-main {
-	min-height: 100vh;
-}
-
-.homeNav {
-	margin-left: 3%;
-	padding-top: 1%;
-}
-
-.allNav {
-	float: right;
-	padding-top: 1%;
-}
-
-.allNav li {
-	color: lightgrey;
-	display: inline;
-	margin-right: 25px;
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+.navbar {
 	cursor: pointer;
-}
-
-.homeNav li {
-	color: lightgrey;
-	display: inline;
-	margin-right: 25px;
-	cursor: pointer;
-}
-
-.socialGroup {
-	display: inline;
-	margin-left: 6%;
-}
-
-.socialIcon {
-	margin-right: 25px;
-	margin-top: 10px;
-	padding: 5px;
-	cursor: pointer;
-}
-
-.socialIcon :hover {
-	color: blue;
-}
-
-.text {
-	color: white;
-	text-align: center;
 }
 
 .title {
+	text-align: justify;
+	padding: 14% 7%;
+	font-family: "Kaushan Script", cursive;
 	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 3rem;
-	font-weight: bolder;
-	margin-top: 15%;
-	margin-left: 6%;
 }
 
-.subtitle {
-	color: lightgrey;
-	font-size: 25px;
-	margin-top: 1%;
-	margin-left: 6%;
-}
-
-.skillBox {
-	box-sizing: border-box;
-	width: 100%;
-	margin: 20px 0;
-}
-
-.skillBox p {
-	color: #fff;
-	text-transform: uppercase;
-	margin: 0 0 10px;
-	padding: 0;
+.title-name {
+	font-size: 70px;
 	font-weight: bold;
-	letter-spacing: 1px;
+	color: #45fc03;
+	cursor: pointer;
 }
 
-.skillBox p:nth-child(2) {
-	float: right;
-	position: relative;
-	top: -25px;
-}
-
-.skill {
-	background: #262626;
-	padding: 4px;
-	box-sizing: border-box;
-	border: 1px solid #0fffb7;
-	border-radius: 2px;
-}
-
-.skill_level {
-	background: #45fc03;
-	width: 100%;
-	height: 10px;
+.note {
+	color: gray;
 }
