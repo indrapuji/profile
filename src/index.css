@@ -23,7 +23,7 @@
 
 .title-about {
 	text-align: justify;
-	padding-top: 14%;
+	padding-top: 10%;
 	padding-left: 7%;
 	font-family: "Kaushan Script", cursive;
 	color: #45fc03;
@@ -41,4 +41,19 @@
 	color: gray;
 	font-family: "Kaushan Script", cursive;
 	font-size: medium;
+}
+
+.space-about {
+	padding-top: 2%;
+}
+
+.title-portfolio {
+	text-align: center;
+	padding: 2%;
+	font-family: "Kaushan Script", cursive;
+	color: #45fc03;
+}
+
+.preview-portfolio {
+	padding: 0% 7%;
 }

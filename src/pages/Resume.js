@@ -21,7 +21,7 @@ function Resume() {
 			exit="out"
 			variants={pageTransition}
 		>
-			<h1 className="title"> Halaman Resume</h1>
+			<h1 className="title">Resume</h1>
 		</motion.div>
 	);
 }

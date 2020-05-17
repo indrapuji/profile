@@ -43,7 +43,7 @@ function About() {
 			<motion.h1
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ duration: 0.3 }}
+				transition={{ duration: 0.1 }}
 				className="title-about"
 			>
 				About me
@@ -59,14 +59,16 @@ function About() {
 			</motion.h4>
 			<Card style={{ backgroundColor: "black" }} className="card-about">
 				<motion.div variants={container} initial="hidden" animate="visible">
-					<motion.div variants={item}>
-						<Card.Body>
+					<Card.Body>
+						<motion.div variants={item}>
 							<Card.Text>
 								Started my programming career 6 month ago. I have successfully
 								completed the boothcamp school in jakarta called Hacktiv8. This
 								school has opened a good opportunities for my professional
 								development.
 							</Card.Text>
+						</motion.div>
+						<motion.div variants={item}>
 							<Card.Text>
 								Fueled by high energy levels and boundless enthusiasm, I’m
 								easily inspired and more then willing to follow my fascinations
@@ -75,12 +77,23 @@ function About() {
 								just come up with ideas. Instead I have an almost impulsive need
 								to act on them.
 							</Card.Text>
+						</motion.div>
+						<motion.div variants={item}>
 							<Card.Text>
 								I’m constantly enhancing my knowledge and I aim to learn more
 								day after day
 							</Card.Text>
-						</Card.Body>
-					</motion.div>
+						</motion.div>
+						<motion.div variants={item}>
+							<Card.Text className="space-about">
+								I’m based in Bekasi (West Java, Indonesia) <br />
+								You can contact me at <br />
+								<strong style={{ color: "#45fc03", fontSize: 30 }}>
+									indrapuji@gmail.com
+								</strong>
+							</Card.Text>
+						</motion.div>
+					</Card.Body>
 				</motion.div>
 			</Card>
 		</motion.div>
