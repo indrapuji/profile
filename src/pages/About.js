@@ -11,7 +11,7 @@ function About() {
 			x: 0,
 		},
 		out: {
-			x: "100vw",
+			x: -200,
 			opacity: 0,
 		},
 	};
@@ -21,16 +21,15 @@ function About() {
 			opacity: 1,
 			scale: 1,
 			transition: {
-				delay: 1,
+				delay: 0.5,
 				when: "beforeChildren",
-				staggerChildren: 0.1,
+				staggerChildren: 0.5,
 			},
 		},
 	};
 	const item = {
-		hidden: { y: 100, opacity: 0 },
+		hidden: { opacity: 0 },
 		visible: {
-			y: 0,
 			opacity: 1,
 		},
 	};
@@ -44,11 +43,12 @@ function About() {
 			<motion.h1
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ duration: 3 }}
+				transition={{ duration: 0.3 }}
 				className="title-about"
 			>
 				About me
 			</motion.h1>
+
 			<motion.h4
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}

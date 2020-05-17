@@ -12,7 +12,7 @@ function Home() {
 			x: 0,
 		},
 		out: {
-			x: "100vw",
+			x: -200,
 			opacity: 0,
 		},
 	};
