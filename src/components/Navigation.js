@@ -46,7 +46,7 @@ function Navigation() {
       >
         {SocialMedia.map((data) => {
           return (
-            <Navbar>
+            <Navbar key={data.href}>
               <Nav className="navbar">
                 <motion.a
                   whileHover={{ color: 'white', scale: 1.5 }}
@@ -62,17 +62,16 @@ function Navigation() {
         })}
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end mx-3" style={{ color: 'grey' }}>
-          {NavPath.map((item) => {
+          {NavPath.map((item, idx) => {
             return (
-              <>
-                <motion.div
-                  className={item.CName}
-                  whileHover={{ color: '#45fc03', scale: 1.5 }}
-                  onClick={() => history.push(item.to)}
-                >
-                  {item.icon}
-                </motion.div>
-              </>
+              <motion.div
+                key={idx}
+                className={item.CName}
+                whileHover={{ color: '#45fc03', scale: 1.5 }}
+                onClick={() => history.push(item.to)}
+              >
+                {item.icon}
+              </motion.div>
             );
           })}
         </Navbar.Collapse>

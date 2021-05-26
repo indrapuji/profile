@@ -20,23 +20,13 @@ function Home() {
     history.push('/profile/about');
   }
   return (
-    <motion.div
-      initial="init"
-      animate="in"
-      exit="out"
-      variants={pageTransition}
-    >
+    <motion.div initial="init" animate="in" exit="out" variants={pageTransition}>
       <div className="title">
-        <h1>Hello, my name is</h1>
-        <motion.h1
-          whileHover={{ color: 'white' }}
-          animate={{ y: -5 }}
-          className="title-name"
-          onClick={about}
-        >
+        <h2>Hello, my name is</h2>
+        <motion.h1 whileHover={{ color: 'white' }} animate={{ y: -5 }} className="title-name" onClick={about}>
           Indra Puji Novirwan
         </motion.h1>
-        <h1>Front end {'&'} Mobile Developer...</h1>
+        <h2>Front end {'&'} Mobile Developer...</h2>
         <p className="note">Self-motifated, organized</p>
       </div>
     </motion.div>
